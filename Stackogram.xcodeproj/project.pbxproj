@@ -14,6 +14,7 @@
 		07814F511E9C688100202B3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07814F4F1E9C688100202B3F /* LaunchScreen.storyboard */; };
 		07814F5C1E9C688100202B3F /* StackogramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07814F5B1E9C688100202B3F /* StackogramTests.swift */; };
 		07814F671E9C688100202B3F /* StackogramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07814F661E9C688100202B3F /* StackogramUITests.swift */; };
+		079838A61E9F22DE0052DDB6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079838A51E9F22DE0052DDB6 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		07814F621E9C688100202B3F /* StackogramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackogramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07814F661E9C688100202B3F /* StackogramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackogramUITests.swift; sourceTree = "<group>"; };
 		07814F681E9C688100202B3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		079838A51E9F22DE0052DDB6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				07814F461E9C688100202B3F /* AppDelegate.swift */,
 				07814F481E9C688100202B3F /* ViewController.swift */,
 				07814F4A1E9C688100202B3F /* Main.storyboard */,
+				079838A51E9F22DE0052DDB6 /* ProfileViewController.swift */,
 				07814F4D1E9C688100202B3F /* Assets.xcassets */,
 				07814F4F1E9C688100202B3F /* LaunchScreen.storyboard */,
 				07814F521E9C688100202B3F /* Info.plist */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				079838A61E9F22DE0052DDB6 /* ProfileViewController.swift in Sources */,
 				07814F491E9C688100202B3F /* ViewController.swift in Sources */,
 				07814F471E9C688100202B3F /* AppDelegate.swift in Sources */,
 			);
@@ -505,6 +509,7 @@
 				07814F6D1E9C688100202B3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07814F6E1E9C688100202B3F /* Build configuration list for PBXNativeTarget "StackogramTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +518,7 @@
 				07814F701E9C688100202B3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07814F711E9C688100202B3F /* Build configuration list for PBXNativeTarget "StackogramUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +527,7 @@
 				07814F731E9C688100202B3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
