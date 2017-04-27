@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0718EB301EB18614000AD5D2 /* SelfieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0718EB2F1EB18614000AD5D2 /* SelfieCell.swift */; };
 		07814F471E9C688100202B3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07814F461E9C688100202B3F /* AppDelegate.swift */; };
 		07814F491E9C688100202B3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07814F481E9C688100202B3F /* ViewController.swift */; };
 		07814F4C1E9C688100202B3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07814F4A1E9C688100202B3F /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0718EB2F1EB18614000AD5D2 /* SelfieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelfieCell.swift; path = ../SelfieCell.swift; sourceTree = "<group>"; };
 		07814F431E9C688100202B3F /* Stackogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stackogram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07814F461E9C688100202B3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07814F481E9C688100202B3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		07814F451E9C688100202B3F /* Stackogram */ = {
 			isa = PBXGroup;
 			children = (
+				0718EB2F1EB18614000AD5D2 /* SelfieCell.swift */,
 				07814F461E9C688100202B3F /* AppDelegate.swift */,
 				07814F481E9C688100202B3F /* ViewController.swift */,
 				07814F4A1E9C688100202B3F /* Main.storyboard */,
@@ -273,6 +276,7 @@
 			files = (
 				079838A61E9F22DE0052DDB6 /* ProfileViewController.swift in Sources */,
 				07814F491E9C688100202B3F /* ViewController.swift in Sources */,
+				0718EB301EB18614000AD5D2 /* SelfieCell.swift in Sources */,
 				07814F471E9C688100202B3F /* AppDelegate.swift in Sources */,
 				078D9A991EA85CE900A87D36 /* User.swift in Sources */,
 				0789B21B1EAEE7AD00AF2D01 /* FeedViewController.swift in Sources */,
