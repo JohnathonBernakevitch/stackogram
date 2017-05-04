@@ -5,7 +5,7 @@
 //  Created by lighthouselabs on 2017-04-10.
 //  Copyright © 2017 lighthouselabs. All rights reserved.
 //
-
+import Parse
 import UIKit
 
 @UIApplicationMain
@@ -14,10 +14,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
+    
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Initialize Parse.
+        // Replace YOUR_APP_ID and URL_TO_YOUR_PARSE_SERVER with the values you chose when you installed your Parse server.
+        let configuration = ParseClientConfiguration { clientConfiguration in
+            clientConfiguration.applicationId = "johnselfiegram"
+            clientConfiguration.server = "https://john-parse-server.herokuapp.com/parse"
+        }
+        Parse.initialize(with: configuration)
+        
+        let testObject = PFObject(className: "TestObject")
+        testObject["foo"] = "bar"
+        testObject.saveInBackground(block: { (success: Bool, error: Error?) -> Void in
+            if success {
+                print("Object has been saved.")
+            } else {
+                print("we have an error \(error)")
+            }
+        })
+        
         return true
     }
+    
+
+//        let testObject = PFObject(className: "TestObject")
+//        testObject["foo"] = "bar"
+//        testObject.saveInBackground(block: { (success: Bool, error: Error?) -> Void in
+//            if success {
+//                print("Object has been saved.")
+//            } else {
+//                print("we have an error \(error)")
+//            }
+//        })
+
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -40,7 +73,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
 
 }
 

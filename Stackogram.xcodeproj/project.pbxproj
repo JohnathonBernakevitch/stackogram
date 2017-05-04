@@ -19,6 +19,7 @@
 		078D9A971EA85CAE00A87D36 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078D9A961EA85CAE00A87D36 /* Post.swift */; };
 		078D9A991EA85CE900A87D36 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078D9A981EA85CE900A87D36 /* User.swift */; };
 		079838A61E9F22DE0052DDB6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079838A51E9F22DE0052DDB6 /* ProfileViewController.swift */; };
+		D6E626A74E1DC4D95E1F456F /* Pods_Stackogram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3AB393C4823F596D1CB4E2 /* Pods_Stackogram.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,9 @@
 		078D9A961EA85CAE00A87D36 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		078D9A981EA85CE900A87D36 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		079838A51E9F22DE0052DDB6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0CD73C6F34D098319D2BAF8E /* Pods-Stackogram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stackogram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stackogram/Pods-Stackogram.release.xcconfig"; sourceTree = "<group>"; };
+		9C3AB393C4823F596D1CB4E2 /* Pods_Stackogram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stackogram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4ABB9D0A22153AB0DA65F29 /* Pods-Stackogram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stackogram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stackogram/Pods-Stackogram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6E626A74E1DC4D95E1F456F /* Pods_Stackogram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +96,8 @@
 				07814F5A1E9C688100202B3F /* StackogramTests */,
 				07814F651E9C688100202B3F /* StackogramUITests */,
 				07814F441E9C688100202B3F /* Products */,
+				4A874B679ABC648632F3DBEC /* Pods */,
+				D7FCAACF9F6D09BB995FA56A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +147,23 @@
 			path = StackogramUITests;
 			sourceTree = "<group>";
 		};
+		4A874B679ABC648632F3DBEC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F4ABB9D0A22153AB0DA65F29 /* Pods-Stackogram.debug.xcconfig */,
+				0CD73C6F34D098319D2BAF8E /* Pods-Stackogram.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D7FCAACF9F6D09BB995FA56A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C3AB393C4823F596D1CB4E2 /* Pods_Stackogram.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07814F6B1E9C688100202B3F /* Build configuration list for PBXNativeTarget "Stackogram" */;
 			buildPhases = (
+				766C3328D53A511AB3AB8499 /* [CP] Check Pods Manifest.lock */,
 				07814F3F1E9C688100202B3F /* Sources */,
 				07814F401E9C688100202B3F /* Frameworks */,
 				07814F411E9C688100202B3F /* Resources */,
+				07DC3144057A802FF98B43D0 /* [CP] Embed Pods Frameworks */,
+				B3C75A8EB0CA86A02DF4419E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,6 +295,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07DC3144057A802FF98B43D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stackogram/Pods-Stackogram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		766C3328D53A511AB3AB8499 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B3C75A8EB0CA86A02DF4419E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stackogram/Pods-Stackogram-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		07814F3F1E9C688100202B3F /* Sources */ = {
@@ -430,6 +505,7 @@
 		};
 		07814F6C1E9C688100202B3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4ABB9D0A22153AB0DA65F29 /* Pods-Stackogram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Stackogram/Info.plist;
@@ -442,6 +518,7 @@
 		};
 		07814F6D1E9C688100202B3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CD73C6F34D098319D2BAF8E /* Pods-Stackogram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Stackogram/Info.plist;
