@@ -106,7 +106,7 @@
                     <navigationItem key="navigationItem" id="nGE-Wi-pxq">
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="byZ-Wo-0e5">
                             <connections>
-                                <action selector="cameraButtonPressed:" destination="TLo-mo-1TS" id="O4K-SH-waL"/>
+                                <action selector="cameraButtonPressed:" destination="TLo-mo-1TS" id="iYD-nT-XiT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

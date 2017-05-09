@@ -5,18 +5,23 @@
 //  Created by lighthouselabs on 2017-04-19.
 //  Copyright © 2017 lighthouselabs. All rights reserved.
 //
-
+import Parse
 import Foundation
 import UIKit
-class Post
-{
-    let imageURL:URL
-    let user:User
-    let comment:String
+class Post: PFObject, PFSubclassing {
+    @NSManaged var image:PFFile
+    @NSManaged var user:PFUser
+    @NSManaged var comment:String
     
-    init(imageURL:URL, user:User, comment:String)
+    static func parseClassName() -> String {
+        
+        return "Post"
+    }
+    
+    convenience init(image:PFFile, user:PFUser, comment:String)
     {
-        self.imageURL = imageURL
+        self.init()
+        self.image = image
         self.user = user
         self.comment = comment
     }

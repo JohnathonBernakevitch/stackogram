@@ -25,13 +25,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             clientConfiguration.applicationId = "johnselfiegram"
             clientConfiguration.server = "https://john-parse-server.herokuapp.com/parse"
         }
+        Post.registerSubclass()
         Parse.initialize(with: configuration)
         
-        let testObject = PFObject(className: "TestObject")
-        testObject["foo"] = "bar"
-        testObject.saveInBackground(block: { (success: Bool, error: Error?) -> Void in
+        let user = PFUser()
+        let username = "John"
+        let password = "bernakevitch"
+        user.username = username
+        user.password = password
+        user.signUpInBackground(block: { (success: Bool, error: Error?) -> Void in
             if success {
-                print("Object has been saved.")
+                print("sucessfully logged in \(user)")
             } else {
                 print("we have an error \(error)")
             }

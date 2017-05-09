@@ -93,8 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				07814F451E9C688100202B3F /* Stackogram */,
-				07814F5A1E9C688100202B3F /* StackogramTests */,
 				07814F651E9C688100202B3F /* StackogramUITests */,
+				07814F5A1E9C688100202B3F /* StackogramTests */,
 				07814F441E9C688100202B3F /* Products */,
 				4A874B679ABC648632F3DBEC /* Pods */,
 				D7FCAACF9F6D09BB995FA56A /* Frameworks */,
@@ -136,7 +136,7 @@
 				07814F5D1E9C688100202B3F /* Info.plist */,
 			);
 			path = StackogramTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		07814F651E9C688100202B3F /* StackogramUITests */ = {
 			isa = PBXGroup;

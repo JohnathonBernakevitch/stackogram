@@ -5,7 +5,7 @@
 //  Created by lighthouselabs on 2017-04-12.
 //  Copyright © 2017 lighthouselabs. All rights reserved.
 //
-
+import Parse
 import UIKit
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -48,18 +48,50 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
 
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            
+                if let imageData = UIImageJPEGRepresentation(image, 0.9),
+                let imageFile = PFFile(data: imageData),
+                let user = PFUser.current(){
+                
+           
+                user["avatarImage"] = imageFile
+                user.saveInBackground(block: { (success, error) -> Void in
+                    if success {
 
-            profileImageView.image = image
+                        let image = UIImage(data: imageData)
+                        self.profileImageView.image = image
+                    }
+                })
+                
+            }
+            
             
         }
 
         dismiss(animated: true, completion: nil)
         
     }
+
+
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    
+        if let user = PFUser.current() {
+            usernameLabel.text = user.username
+            
+            if let imageFile = user["avartarImage"] as? PFFile {
+                
+                imageFile.getDataInBackground(block: {(data, error) -> Void in
+                    if let imageData = data {
+                        self.profileImageView.image = UIImage(data: imageData)
+                    
+                    }
+                })
+        }
+    }
 }
-
-
-
-
+}
