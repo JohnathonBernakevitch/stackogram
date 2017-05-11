@@ -31,59 +31,7 @@ class FeedViewController: UITableViewController, UIImagePickerControllerDelegate
                 
             })
         }
-        
-//    let me = User(aUsername:"danny", aProfileImage: UIImage(named: "grumpy-cat")!)
-//    let post0 = Post(image: UIImage(named: "grumpy-cat")!, user: me, comment: "Grumpy-Cat 0")
-//    let post1 = Post(image: UIImage(named: "grumpy-cat")!, user: me, comment: "Grumpy-Cat 1")
-//    let post2 = Post(image: UIImage(named: "grumpy-cat")!, user: me, comment: "Grumpy-Cat 2")
-//    let post3 = Post(image: UIImage(named: "grumpy-cat")!, user: me, comment: "Grumpy-Cat 3")
-//    let post4 = Post(image: UIImage(named: "grumpy-cat")!, user: me, comment: "Grumpy-Cat 4")
-        
-//    posts = [post0, post1, post2, post3, post4]
-        
-        
-        
-//        let url = URL(string: "https://www.flickr.com/services/rest/?method=flickr.photos.search&format=json&nojsoncallback=1&api_key=89d26ec02bef3080576fb3a165bb9d1e&tags=cat")!
-//        
-//        let task = URLSession.shared.dataTask(with: url, completionHandler: {(data, response, error) -> Void in
-//            
-//            if let jsonUnformatted = try? JSONSerialization.jsonObject(with: data!, options: []) {
-//                let json = jsonUnformatted as? [String : AnyObject]
-//                let photosDictionary = json?["photos"] as? [String : AnyObject]
-//                if let photosArray = photosDictionary?["photo"] as? [[String : AnyObject]] {
-//                
-//                for photo in photosArray{
-//                    if let farmID = photo["farm"] as? Int,
-//                    let serverID = photo["server"] as? String,
-//                    let photoID  = photo["id"] as? String,
-//                        let secret = photo["secret"] as? String{
-//                        
-//                        let photoURLString = "https://farm\(farmID).staticflickr.com/\(serverID)/\(photoID)_\(secret).jpg"
-//                        print(photoURLString)
-//                        
-//                        if let photoURL = URL(string: photoURLString){
-//                            let me = User(aUsername: "sam",aProfileImage: UIImage(named: "grumpy-cat")!)
-//                            let post = Post(image: photoURL, user: me, comment: "a Flicker Selfie")
-//                            self.posts.append(post)
-//                        }
-//                    }
-//                }
-//                    OperationQueue.main.addOperation{
-//                        self.tableView.reloadData()
-//                    }
-//            }
-//            }
-//            else
-//            {
-//            print("error with response data")
-//        }
-//        
-//        // this is called to start (or restart, if needed) our task
-//            
-//        })
-//
-//            task.resume()
-//
+
 
     }
 
@@ -132,15 +80,7 @@ class FeedViewController: UITableViewController, UIImagePickerControllerDelegate
         
         cell.selfieImageView.image = nil
         
-//        let task = URLSession.shared.downloadTask(with: post.image){(url,response,error) -> Void in
-//            
-//            if let imageURL = url, let imageData = try? Data(contentsOf: imageURL){
-//                OperationQueue.main.addOperation {
-//                    cell.selfieImageView.image = UIImage(data: imageData)
-//                }
-//            }
-//        }
-//        task.resume()
+
         
         let imageFile = post.image
         imageFile.getDataInBackground(block: {(data, error) -> Void in
