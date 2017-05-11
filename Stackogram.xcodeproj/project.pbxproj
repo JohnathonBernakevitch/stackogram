@@ -19,6 +19,7 @@
 		078D9A971EA85CAE00A87D36 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078D9A961EA85CAE00A87D36 /* Post.swift */; };
 		078D9A991EA85CE900A87D36 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078D9A981EA85CE900A87D36 /* User.swift */; };
 		079838A61E9F22DE0052DDB6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079838A51E9F22DE0052DDB6 /* ProfileViewController.swift */; };
+		07D7869D1EC4003400B6FD52 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D7869C1EC4003400B6FD52 /* Activity.swift */; };
 		D6E626A74E1DC4D95E1F456F /* Pods_Stackogram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3AB393C4823F596D1CB4E2 /* Pods_Stackogram.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		078D9A961EA85CAE00A87D36 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		078D9A981EA85CE900A87D36 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		079838A51E9F22DE0052DDB6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		07D7869C1EC4003400B6FD52 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		0CD73C6F34D098319D2BAF8E /* Pods-Stackogram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stackogram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stackogram/Pods-Stackogram.release.xcconfig"; sourceTree = "<group>"; };
 		9C3AB393C4823F596D1CB4E2 /* Pods_Stackogram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stackogram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4ABB9D0A22153AB0DA65F29 /* Pods-Stackogram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stackogram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stackogram/Pods-Stackogram.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				0718EB2F1EB18614000AD5D2 /* SelfieCell.swift */,
+				07D7869C1EC4003400B6FD52 /* Activity.swift */,
 				07814F461E9C688100202B3F /* AppDelegate.swift */,
 				07814F481E9C688100202B3F /* ViewController.swift */,
 				07814F4A1E9C688100202B3F /* Main.storyboard */,
@@ -355,6 +358,7 @@
 				07814F471E9C688100202B3F /* AppDelegate.swift in Sources */,
 				078D9A991EA85CE900A87D36 /* User.swift in Sources */,
 				0789B21B1EAEE7AD00AF2D01 /* FeedViewController.swift in Sources */,
+				07D7869D1EC4003400B6FD52 /* Activity.swift in Sources */,
 				078D9A971EA85CAE00A87D36 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

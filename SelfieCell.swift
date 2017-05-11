@@ -18,6 +18,11 @@ class SelfieCell: UITableViewCell {
     
     @IBOutlet weak var commentLabel: UILabel!
     
+    @IBAction func likeButtonClicked(_ sender: UIButton) {
+        
+        sender.isSelected = !sender.isSelected
+        
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
