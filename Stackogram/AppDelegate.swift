@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             clientConfiguration.applicationId = "johnselfiegram"
             clientConfiguration.server = "https://john-parse-server.herokuapp.com/parse"
         }
+        Activity.registerSubclass()
         Post.registerSubclass()
         Parse.initialize(with: configuration)
         
@@ -38,6 +39,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("sucessfully logged in \(user)")
             } else {
                 print("we have an error \(error)")
+                PFUser.logInWithUsername(inBackground: username, password: password, block: { (user, error) in
+                    if let user = user {
+                        print("sucessfully logged in \(user)")
+                    }
+                    })
             }
         })
         

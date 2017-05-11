@@ -26,6 +26,9 @@ class Post: PFObject, PFSubclassing {
         self.comment = comment
     }
     
-    
+    var likes: PFRelation<PFObject>! {
+        
+        return relation(forKey: "likes")
+    }
     
 }

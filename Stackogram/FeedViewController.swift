@@ -80,20 +80,8 @@ class FeedViewController: UITableViewController, UIImagePickerControllerDelegate
         
         cell.selfieImageView.image = nil
         
-
+        cell.post = post
         
-        let imageFile = post.image
-        imageFile.getDataInBackground(block: {(data, error) -> Void in
-            if let data = data {
-                let image = UIImage(data: data)
-                cell.selfieImageView.image = image
-            }
-        })
-            
-        cell.usernameLabel.text = post.user.username
-//        cell.selfieImageView.image = post.image
-        cell.commentLabel.text = post.comment
-
         return cell
     }
 
