@@ -107,6 +107,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="commentLabel" destination="dXT-nu-HZ3" id="cFe-xQ-47Q"/>
+                                    <outlet property="likeButton" destination="h4p-Nd-aBX" id="yfE-ch-tfe"/>
                                     <outlet property="selfieImageView" destination="dSW-O9-dMM" id="BAz-Qg-Gtj"/>
                                     <outlet property="usernameLabel" destination="XCA-Zs-cNd" id="Zj4-Y0-3fE"/>
                                 </connections>

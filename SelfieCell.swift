@@ -17,6 +17,8 @@ class SelfieCell: UITableViewCell {
         didSet{
         
         if let post = post {
+            
+            selfieImageView.image = nil
         
         let imageFile = post.image
         imageFile.getDataInBackground(block: {(data, error) -> Void in
@@ -29,12 +31,26 @@ class SelfieCell: UITableViewCell {
         usernameLabel.text = post.user.username
 
         commentLabel.text = post.comment
+            
+        likeButton.isSelected = false
 
-        
+        let query = post.likes.query()
+            query.findObjectsInBackground(block: {(users, error) -> Void in
+                
+                if let users = users as? [PFUser]{
+                    for user in users {
+                        if user.objectId == PFUser.current()?.objectId{
+                            self.likeButton.isSelected = true
+                        }
+                    }
+                }
+            })
+            }
+        }
     }
-    }
-}
 
+
+    @IBOutlet weak var likeButton: UIButton!
 
 
 
@@ -56,16 +72,43 @@ class SelfieCell: UITableViewCell {
                 post.saveInBackground(block: { (success, error) -> Void in
                     if success{
                         print("like from user successfully saved")
+                        
+                        let activity = Activity(type: "like", user: user, post: post)
+                        activity.saveInBackground(block: {(success, error) -> Void in
+                            print("activity sucessfully saved")
+                        })
+                        
                     }else{
                         print("error is \(error)")
                     }
                 })
    
             } else {
-                                        post.likes.remove(user)
+                        post.likes.remove(user)
                         post.saveInBackground(block: { (success, error) -> Void in
                             if success {
                                 print("like from user successfully removed")
+                                
+                                if let activityQuery = Activity.query(){
+                                    
+                                    activityQuery.whereKey("post", equalTo: post)
+                                    activityQuery.whereKey("user", equalTo: user)
+                                    activityQuery.whereKey("type", equalTo: "like")
+                                    activityQuery.findObjectsInBackground(block: {(activities, error) -> Void in
+                                        
+                                        if let activities = activities {
+                                            for activity in activities{
+                                                activity.deleteInBackground(block:{(sucess, error) -> Void in
+                                                    print("deleted activity")
+                                                })
+                                            }
+                                        }
+                                    })
+                                    
+                                    
+                                }
+                                
+                                
                             }else{
                                 print("error is \(error)")
                             }
@@ -75,7 +118,7 @@ class SelfieCell: UITableViewCell {
         }
     }
     
-                                
+    
                                 
                                 
                                 
