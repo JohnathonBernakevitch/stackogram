@@ -19,7 +19,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         usernameLabel.text = "yourName"
-        
+        navigationItem.titleView = UIImageView(image: UIImage(named: "AppIcon"))
         
     }
 
